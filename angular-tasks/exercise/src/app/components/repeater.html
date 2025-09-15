@@ -1,0 +1,4 @@
+@for (item of options(); track $index) {
+<ng-container [ngTemplateOutlet]="itemTemplate"
+    [ngTemplateOutletContext]="{ $implicit: item }"></ng-container>
+}

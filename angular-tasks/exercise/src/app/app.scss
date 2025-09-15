@@ -1,0 +1,26 @@
+.item {
+    &__container {
+        display: flex;
+        gap: 10px;
+        min-width: 300px;
+    }
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-width: 20dvw;
+    }
+
+    &__block {
+        background-color: aliceblue;
+        padding: 10px;
+
+        border: {
+            width: 1px;
+            style: solid;
+            color: #ccc;
+            radius: 5px
+        }
+    }
+}

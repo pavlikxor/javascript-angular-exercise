@@ -1,0 +1,48 @@
+<div class="item__container">
+  <div class="item__group">
+    <h2>'-name'</h2>
+    <app-repeater class="item__group" [options]="itemsList() | customSort: '-name'">
+      <ng-template let-item>
+        <div class="item__block">
+          <div>{{ item.name }}</div>
+          <div>{{ item.harvestedDate | date:'dd/MM/yyyy' }}</div>
+        </div>
+      </ng-template>
+    </app-repeater>
+  </div>
+
+  <div class="item__group">
+    <h2>['name', '-price']</h2>
+    <app-repeater class="item__group" [options]="itemsList() | customSort: ['name', '-price']">
+      <ng-template let-item>
+        <div class="item__block">
+          <div>{{ item.name }}</div>
+          <div>Price: {{ item.price }}</div>
+        </div>
+      </ng-template>
+    </app-repeater>
+  </div>
+  <div class="item__group">
+    <h2>'-date'</h2>
+    <app-repeater class="item__group" [options]="itemsList() | customSort: '-harvestedDate'">
+      <ng-template let-item>
+        <div class="item__block">
+          <div>{{ item.name }}</div>
+          <div>{{ item.harvestedDate | date:'dd/MM/yyyy' }}</div>
+        </div>
+      </ng-template>
+    </app-repeater>
+  </div>
+
+  <div class="item__group">
+    <h2>'isLocal'</h2>
+    <app-repeater class="item__group" [options]="itemsList() | customSort: 'isLocal'">
+      <ng-template let-item>
+        <div class="item__block">
+          <div>{{ item.name }}</div>
+          <div>{{ item.isLocal ? 'Local' : 'Imported' }}</div>
+        </div>
+      </ng-template>
+    </app-repeater>
+  </div>
+</div>
